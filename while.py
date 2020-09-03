@@ -42,7 +42,7 @@ for i,j in zhanghao.items():              #同时取key,value
 print("------------------------------")
 '''
 
-
+'''
 t_user = [{"username":"zhangsan","password":"123456"},{"username":"芜湖","password":"999888"}]
 u = input("请输入用户名：")
 p = input("请输入密码：")
@@ -55,6 +55,23 @@ for i in t_user:
         if len(t_user) == a:
             print("登录失败")
     a = a + 1
-
+'''
 
 # 作业：注册题目。  数组去重   数组中元素排序
+
+t_user = [{"username":"zhangsan","password":"123456"},{"username":"芜湖","password":"999888"}]
+u = input("请输入用户名：")
+p = input("请输入密码：")
+a = 1
+for i in t_user:
+    if i["username"] == u:
+        print("用户名已存在，注册失败！")
+        break
+    else:
+        if len(t_user) == a:
+            print("用户名不存在，请注册")
+            c = {"username":u,"password":p}
+            t_user.append(c)
+            break
+    a = a + 1
+print(t_user)
